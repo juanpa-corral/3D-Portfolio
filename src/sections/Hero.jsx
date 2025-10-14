@@ -8,7 +8,7 @@ import { Environment, Float, Lightformer } from '@react-three/drei';
 import { Technology } from '../components/Technology';
 import { useMediaQuery } from 'react-responsive';
 
-export const Hero = () => {
+const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth:853 })
   const contextRef = useRef(null);
   const headerRef = useRef(null);
@@ -68,3 +68,4 @@ export const Hero = () => {
     </section>
   )
 }
+export default Hero;
