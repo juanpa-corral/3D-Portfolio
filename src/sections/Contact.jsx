@@ -66,7 +66,7 @@ const Contact = () => {
           <div className="flex flex-col w-full gap-10">
             <div className="social-link">
               <h2>E-mail</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
+              <div className="w-full h-px my-2 bg-blue-400" />
               <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
                 {/* YOUR REAL EMAIL */}
                 juanpacorralh@jpcodai.com
@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
             <div className="social-link">
               <h2>Phone</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
+              <div className="w-full h-px my-2 bg-blue-400" />
               <p className="text-xl lowercase md:text-2xl lg:text-3xl">
                 {/* YOUR REAL PHONE NUMBER */}
                 (+57) 316 318 1253
@@ -82,7 +82,7 @@ const Contact = () => {
             </div>
             <div className="social-link">
               <h2>Social Media</h2>
-              <div className="w-full h-px my-2 bg-white/30" />
+              <div className="w-full h-px my-2 bg-blue-400" />
               <div className="flex flex-col flex-wrap md:flex-row gap-x-4 gap-y-2">
               {socials.map((social, index) => (
                 <a

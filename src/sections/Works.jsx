@@ -136,7 +136,7 @@ const Works = () => {
               <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
             </div>
             {/* divider */}
-            <div className="w-full h-0.5 bg-black/80" />
+            <div className="w-full h-0.5 bg-blue-600" />
             {/* framework */}
             <div className="flex px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
               {project.frameworks.map((framework) => (

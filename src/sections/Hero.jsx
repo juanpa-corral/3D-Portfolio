@@ -36,7 +36,7 @@ const Hero = () => {
         <div ref={contextRef}>
             <div style={{ clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"}}>
                 <div ref={headerRef} className='flex flex-col justify-center gap-12 pt-16 sm:gap-16'>
-                    <p className='text-sm font-light tracking-[0.5rem] uppercase px-10 text-black'>404 No Bugs Found</p>
+                    <p className='text-sm font-light tracking-[0.5rem] uppercase px-10 text-blue-600'>ENGINEERING FOR RESULTS</p>
                     <div className='px-10'>
                         <h1 className='flex flex-col flex-wrap gap-12 text-black uppercase banner-text-responsive sm:gap-16 md:block'>JPCodai</h1>
                     </div>

@@ -1,66 +1,78 @@
+// About.jsx (Versión final con Iconify)
+
 import { useRef } from "react";
-import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { AnimatedTextLines } from "../components/AnimatedTextLines";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { aboutData } from "../constants/index"; // <-- Asegúrate que la ruta sea correcta
+import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+
+// 1. IMPORTA EL COMPONENTE ICON
+import { Icon } from '@iconify/react';
 
 const About = () => {
-const text = `Engineering full-stack systems and data intelligence 
+  const text = `Engineering full-stack systems and data intelligence 
 to build high-performance, scalable solutions 
 from prototype to production`;
 
-const aboutText = `I am a Dual Degree student specializing in Software Architecture and AI/Data Science, driven by a passion for creating truly intelligent systems. My expertise spans the entire development lifecycle—from designing resilient architectures to deploying predictive Machine Learning models.
-
-My hands-on experience includes:
-⚡ Full-Stack Development using Java Spring Boot and React.js.
-🧠 Building ML models (Scikit-learn) for optimization and anomaly detection in financial data.
-☁️ Implementing CI/CD pipelines and designing enterprise architectures for cloud scalability (OCI/AWS focus).
-
-When I'm not engineering systems:
-💻 I'm contributing to open-source projects or exploring new data visualization techniques.
-🏆 I focus on leadership and personal performance, awarded the Sabana Excellence Scholarship for outstanding results.
-🎸 I enjoy blending technical problem-solving with creative outlets like music and leadership.`;
   const imgRef = useRef(null);
+  
+  // (Aquí va tu código de useGSAP, no es necesario cambiarlo)
   useGSAP(() => {
-    gsap.to("#about", {
-      scale: 0.95,
-      scrollTrigger: {
-        trigger: "#about",
-        start: "bottom 80%",
-        end: "bottom 20%",
-        scrub: true,
-        markers: false,
-      },
-      ease: "power1.inOut",
-    });
-
-    gsap.set(imgRef.current, {
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-    });
-    gsap.to(imgRef.current, {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 2,
-      ease: "power4.out",
-      scrollTrigger: { trigger: imgRef.current },
-    });
+    // ... tu animación de GSAP ...
   });
+
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Cod with purpose, Built to scale"}
+        subTitle={"Code with purpose, Built to scale"}
         title={"About"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 lg:flex-row lg:items-start">
         <img
           ref={imgRef}
           src="images/man.JPEG"
-          alt="man"
-          className="w-md rounded-3xl"
+          alt="Juan Pablo Corral"
+          className="w-full max-w-md rounded-3xl object-cover"
         />
-        <AnimatedTextLines text={aboutText} className={"w-full"} />
+
+        <div className="w-full text-xl font-light tracking-wide md:text-2xl lg:text-3xl text-white/70">
+          {aboutData.map((section, index) => {
+            switch (section.type) {
+              case 'heading':
+                return (
+                  <h3 key={index} className="mt-8 mb-4 text-xl font-semibold tracking-wider text-white uppercase md:text-2xl">
+                    {section.content}
+                  </h3>
+                );
+              case 'paragraph':
+                return (
+                  <p key={index} className="mb-6 leading-relaxed">
+                    {section.content}
+                  </p>
+                );
+              case 'list':
+                return (
+                  <ul key={index} className="space-y-4">
+                    {/* 2. AQUÍ ESTÁ LA LÓGICA ACTUALIZADA */}
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-x-4">
+                        <Icon 
+                          icon={item.icon} 
+                          className="text-blue-500 text-2xl mt-1 flex-shrink-0 lg:text-3xl" 
+                        />
+                        <span>{item.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              default:
+                return null;
+            }
+          })}
+        </div>
       </div>
     </section>
   );

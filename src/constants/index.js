@@ -120,7 +120,57 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/juanpa834" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/juan-pablo-corral-henao/" },
   { name: "GitHub", href: "https://github.com/juanpa-corral" },
+];
+// Simulación de la estructura de datos (fuera de About.jsx)
+// index.js (Versión actualizada para usar Iconify)
+
+export const aboutData = [
+  {
+    type: 'paragraph',
+    content: "I am a Dual Degree student specializing in Software Architecture and AI/Data Science, driven by a passion for creating truly intelligent systems. My expertise spans the entire development lifecycle—from designing resilient architectures to deploying predictive Machine Learning models."
+  },
+  {
+    type: 'heading',
+    content: "HANDS-ON EXPERIENCE:"
+  },
+  {
+    type: 'list',
+    items: [
+      { 
+        icon: "ph:stack-bold", 
+        text: "Full-Stack Development using Java Spring Boot and React.js." 
+      },
+      { 
+        icon: "carbon:machine-learning-model", 
+        text: "Building ML models (Scikit-learn) for optimization and anomaly detection in financial data." 
+      },
+      { 
+        icon: "ph:cloud-arrow-up-bold", 
+        text: "Implementing CI/CD pipelines and designing enterprise architectures for cloud scalability (OCI/AWS focus)." 
+      },
+    ]
+  },
+  {
+    type: 'heading',
+    content: "BEYOND ENGINEERING:"
+  },
+  {
+    type: 'list',
+    items: [
+      { 
+        icon: "ph:laptop-bold", 
+        text: "I'm contributing to open-source projects or exploring new data visualization techniques." 
+      },
+      { 
+        icon: "ph:trophy-bold", 
+        text: "I focus on leadership and personal performance, awarded the Sabana Excellence Scholarship for outstanding results." 
+      },
+      { 
+        icon: "ph:guitar-bold", 
+        text: "I enjoy blending technical problem-solving with creative outlets like music and leadership." 
+      },
+    ]
+  },
 ];

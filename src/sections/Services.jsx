@@ -58,13 +58,13 @@ const Services = () => {
                 {service.items.map((item, itemIndex) => (
                   <div key={`item-${index}-${itemIndex}`}>
                     <h3 className="flex">
-                      <span className="mr-12 text-lg text-white/30">
+                      <span className="mr-12 text-lg text-blue-600">
                         0{itemIndex + 1}
                       </span>
                       {item.title}
                     </h3>
                     {itemIndex < service.items.length - 1 && (
-                      <div className="w-full h-px my-2 bg-white/30" />
+                      <div className="w-full h-px my-2 bg-blue-400" />
                     )}
                   </div>
                 ))}
