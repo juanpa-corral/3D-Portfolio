@@ -1,78 +1,73 @@
 // index.js
 export const servicesData = [
+  // PILAR 1: SOFTWARE ARCHITECTURE & CLOUD DESIGN
   {
-    title: "FullStack Development",
+    title: "Architecture & Cloud Scalability",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "Designing robust, modular enterprise and software architectures for the cloud. We ensure the foundational base for high-performance solutions and future growth.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        title: "Enterprise and Software Architecture Design",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX)",
+        title: "Cloud Integration (OCI & AWS Fundamentals)",
       },
       {
-        title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        title: "Microservices Design & Scalability",
       },
     ],
   },
+
+  // PILAR 2: FULL STACK DEVELOPMENT & DEVOPS
   {
-    title: "DevOps & Cloud Solutions",
+    title: "Full Stack Engineering & CI/CD",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "End-to-end development of high-performance applications, from backend APIs to modern frontends, integrating DevOps practices for fast, automated delivery.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        title: "Full Stack: Java/Spring Boot & React.js",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "CI/CD Pipelines with Jenkins & Docker",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "Version Control & Code Review Workflows",
       },
     ],
   },
+
+  // PILAR 3: DATA ANALYTICS & ML MODELING
   {
-    title: "Security & Optimization",
+    title: "Data Analytics & ML Modeling",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "Building Machine Learning (ML) models and advanced data analysis systems to extract predictive value, addressing challenges like handling imbalanced data.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "Predictive Modeling (Python/Scikit-learn)",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Anomaly Detection (DBSCAN, Isolation Forest)",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "Data Management & Administration",
       },
     ],
   },
+
+  // PILAR 4: AI/ML APPLICATION & BUSINESS IMPACT
   {
-    title: "Web & Mobile Apps",
+    title: "Optimization & Decision Intelligence",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "Direct application of AI solutions to automate core processes, optimize operational efficiency, and enable data-informed strategic decision-making.",
     items: [
       {
-        title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        title: "Operational Efficiency & Automation",
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        title: "Data-Informed Decision-Making",
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "Model Validation (Precision-Recall Curves)",
       },
     ],
   },
