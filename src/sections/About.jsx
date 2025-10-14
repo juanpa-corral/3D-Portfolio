@@ -7,7 +7,7 @@ import gsap from "gsap";
 const About = () => {
 const text = `Engineering full-stack systems and data intelligence 
 to build high-performance, scalable solutions 
-from prototype to production.`;
+from prototype to production`;
 
 const aboutText = `I am a Dual Degree student specializing in Software Architecture and AI/Data Science, driven by a passion for creating truly intelligent systems. My expertise spans the entire development lifecycle—from designing resilient architectures to deploying predictive Machine Learning models.
 

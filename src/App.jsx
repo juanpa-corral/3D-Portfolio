@@ -4,6 +4,7 @@ import { Hero } from './sections/Hero'
 import ServiceSummary from './sections/ServiceSummary'
 import Services from './sections/Services'
 import About from './sections/About'
+import Works from './sections/Works'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <ServiceSummary />
       <Services />
       <About />
+      <Works />
     </div>
   )
 }

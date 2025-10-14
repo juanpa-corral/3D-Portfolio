@@ -7,7 +7,7 @@ import gsap from "gsap";
 const Services = () => {
   const text = `We engineer scalable enterprise / software architectures and deploy 
   AI-powered solutions to automate core processes, 
-  ensuring zero headaches and maximum competitive advantage.`;
+  ensuring zero headaches and maximum competitive advantage`;
   const serviceRefs = useRef([]);
   const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
   useGSAP(() => {
