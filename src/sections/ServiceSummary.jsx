@@ -14,7 +14,7 @@ const ServiceSummary = () => {
             scrollTrigger: {
                 trigger: "#title-service-1",
                 scrub: true,
-                start: "top 70%", // La animación empieza cuando el título está al 80% de la vista
+                start: "top 60%", // La animación empieza cuando el título está al 80% de la vista
             },
         });
         gsap.to("#title-service-2", {
@@ -22,7 +22,7 @@ const ServiceSummary = () => {
             scrollTrigger: {
                 trigger: "#title-service-2",
                 scrub: true,
-                start: "top 70%",
+                start: "top 60%",
             },
         });
         gsap.to("#title-service-3", {
@@ -30,7 +30,7 @@ const ServiceSummary = () => {
             scrollTrigger: {
                 trigger: "#title-service-3",
                 scrub: true,
-                start: "top 70%",
+                start: "top 60%",
             },
         });
         gsap.to("#title-service-4", {
@@ -38,7 +38,7 @@ const ServiceSummary = () => {
             scrollTrigger: {
                 trigger: "#title-service-4",
                 scrub: true,
-                start: "top 70%",
+                start: "top 60%",
             },
         });
         gsap.to("#title-service-5", {
@@ -46,7 +46,7 @@ const ServiceSummary = () => {
             scrollTrigger: {
                 trigger: "#title-service-5",
                 scrub: true,
-                start: "top 70%",
+                start: "top 60%",
             },
         });
     });
