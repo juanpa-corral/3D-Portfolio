@@ -1,16 +1,55 @@
-# React + Vite
+# JPCODAI - Software Architecture & AI Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my personal portfolio website, **JPcodai**.
 
-Currently, two official plugins are available:
+This portfolio serves as a showcase of my ability to build **scalable, high-performance systems** while integrating **Data Science and Machine Learning (AI/ML)** capabilities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## React Compiler
+* **Dual Focus:** Demonstrates expertise in both **Software Architecture** (Full Stack Engineering) and **Data/AI Solutions**.
+* **Modern Stack:** Built using **React, Tailwind CSS, and React Three Fiber (R3F)** for immersive 3D visualization.
+* **Scroll-Driven UI:** Features complex scroll animations using **GSAP (ScrollTrigger)** for a dynamic user experience.
+* **Architecture Focus:** The interactive 3D model visualizes a modular software and data processing stack.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Core Expertise Demonstrated
 
-## Expanding the ESLint configuration
+| Pillar | Focus | Technologies |
+| :--- | :--- | :--- |
+| **Architecture** | Scalability, System Design | **Java/Spring Boot**, **OCI/AWS**, Microservices |
+| **Engineering** | Full Stack Development, DevOps | **React.js**, **CI/CD (Jenkins, Docker)**, Git Workflows |
+| **Intelligence** | Predictive Modeling, Data Analysis | **Python**, **Scikit-learn**, DBSCAN, Isolation Forest |
+| **Impact** | Automation, Decision Support | Optimization, Precision-Recall Curves |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Tech Stack & Setup
+
+This project uses **Vite** as a build tool.
+
+### Prerequisites
+
+* Node.js (v18+)
+* npm or yarn
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/juanpa-corral/jp-portfolio.git](https://github.com/juanpa-corral/jp-portfolio.git)
+    cd jp-portfolio
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install 
+    # OR: npm install --force (if facing React 19 dependency conflicts)
+    ```
+3.  **Run locally:**
+    ```bash
+    npm run dev
+    ```
+    The application will be accessible at `http://localhost:5173/`.
+
+### Deployment (Build for Production)
+
+To generate the optimized static files for deployment (e.g., to Hostinger, Netlify, Vercel):
+
+```bash
+npm run build
