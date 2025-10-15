@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { socials } from "../constants";
+import { socials } from "../constants"; // Asegúrate que la ruta a tus constantes sea correcta
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
@@ -11,12 +11,14 @@ const Navbar = () => {
   const contactRef = useRef(null);
   const topLineRef = useRef(null);
   const bottomLineRef = useRef(null);
+  const logoNavRef = useRef(null);
   const tl = useRef(null);
   const iconTl = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
+  const [showLogo, setShowLogo] = useState(true);
 
-  // Función para obtener el icono correspondiente según el nombre de la red social
+  // Función para obtener el icono correspondiente
   const getSocialIcon = (socialName) => {
     switch (socialName.toLowerCase()) {
       case 'instagram':
@@ -29,6 +31,8 @@ const Navbar = () => {
         return null;
     }
   };
+
+  // Animaciones GSAP para el menú
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
     gsap.set([linksRef.current, contactRef.current], {
@@ -63,6 +67,16 @@ const Navbar = () => {
           ease: "power2.out",
         },
         "<+0.2"
+      )
+      .to(
+        logoNavRef.current,
+        {
+          autoAlpha: 1,
+          x: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        "<"
       );
 
     iconTl.current = gsap
@@ -85,21 +99,20 @@ const Navbar = () => {
       );
   }, []);
 
+  // Lógica de aparición/desaparición con el scroll
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
-
+      setShowLogo(currentScrollY < 10);
       lastScrollY = currentScrollY;
     };
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Función para abrir/cerrar el menú
   const toggleMenu = () => {
     if (isOpen) {
       tl.current.reverse();
@@ -110,19 +123,34 @@ const Navbar = () => {
     }
     setIsOpen(!isOpen);
   };
+
   return (
     <>
+      <a
+        href="#home"
+        className={`fixed top-4 left-10 z-50 transition-opacity duration-300
+                   ${showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
+        }
+      >
+        <img
+          src="/images/Logotipo_Principal.png"
+          alt="JPCodai Logo"
+          className="w-28 h-auto md:w-40"
+        />
+      </a>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        // 1. AJUSTAMOS EL PADDING VERTICAL PARA MÓVIL
+        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-35 md:py-28 gap-y-10 md:w-1/2 md:left-1/2"
       >
-        <div className="flex flex-col text-5xl gap-y-2 md:text-7xl lg:text-7xl">
+        {/* 2. AJUSTAMOS EL TAMAÑO DE LA FUENTE Y EL ESPACIADO PARA MÓVIL */}
+        <div className="flex flex-col text-4xl sm:text-5xl gap-y-1 sm:gap-y-2 md:text-7xl lg:text-7xl">
           {["home", "services", "about", "work", "contact"].map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
                 <Link
                   className="transition-all duration-300 cursor-pointer hover:text-white"
-                  onClick={toggleMenu} // <-- MODIFICACIÓN CLAVE: Cierra el menú al hacer clic
+                  onClick={toggleMenu}
                   to={`${section}`}
                   smooth
                   offset={0}
@@ -134,6 +162,7 @@ const Navbar = () => {
             )
           )}
         </div>
+        
         <div
           ref={contactRef}
           className="flex flex-col flex-wrap justify-between gap-8 md:flex-row"
@@ -162,7 +191,15 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <img
+          ref={logoNavRef}
+          src="/images/Logotipo_Negativo.png"
+          alt="JPCodai Logo"
+          className="flex flex-col w-20 h-auto opacity-50 bottom-8 right-10 md:absolute md:w-24 md:bottom-10 hover:opacity-100 transition-opacity"
+        />
       </nav>
+
+      {/* BOTÓN HAMBURGUESA */}
       <div
         className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
         onClick={toggleMenu}

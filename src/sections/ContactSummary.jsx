@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Marquee from "../components/Marquee";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import IsotipoIcon from "../components/IsotipoIcon";
 
 const ContactSummary = () => {
   const containerRef = useRef(null);
@@ -38,7 +39,11 @@ const ContactSummary = () => {
       ref={containerRef}
       className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
     >
-      <Marquee items={items} />
+      <Marquee
+        items={items}
+        CustomIcon={IsotipoIcon}
+        iconClassName="w-8 h-8 text-white" // Hacemos el isotipo blanco
+      />
       <div className="overflow-hidden font-light text-center contact-text-responsive">
         <p>
           “ Let’s architect an <br />

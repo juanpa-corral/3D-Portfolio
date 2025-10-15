@@ -9,6 +9,7 @@ const Marquee = ({
   icon = "mdi:star-four-points",
   iconClassName = "",
   reverse = false,
+  CustomIcon,
 }) => {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -154,7 +155,13 @@ const Marquee = ({
             ref={(el) => (itemsRef.current[index] = el)}
             className="flex items-center px-16 gap-x-32"
           >
-            {text} <Icon icon={icon} className={iconClassName} />
+            {text}{" "}
+            {/* 2. LÓGICA CONDICIONAL PARA RENDERIZAR EL ICONO */}
+            {CustomIcon ? (
+              <CustomIcon className={iconClassName} />
+            ) : (
+              <Icon icon={icon} className={iconClassName} />
+            )}
           </span>
         ))}
       </div>

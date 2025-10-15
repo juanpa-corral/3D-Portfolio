@@ -7,6 +7,7 @@ import { socials } from "../constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import IsotipoIcon from "../components/IsotipoIcon";
 
 const Contact = () => {
 
@@ -101,7 +102,11 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Marquee items={items} className="text-white bg-transparent" />
+      <Marquee
+        items={items}
+        CustomIcon={IsotipoIcon}
+        iconClassName="w-8 h-8 text-white" // Hacemos el isotipo blanco
+      />
     </section>
   );
 };

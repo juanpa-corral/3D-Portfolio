@@ -93,8 +93,8 @@ export const projects = [
       { id: 2, name: "Java Spring Boot" },
       { id: 3, name: "CI/CD (Jenkins/Docker/SonarQube/Github Actions)" },
     ],
-    image: "/assets/projects/roomscout_main.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    image: "/assets/projects/roomscout_bg.jpeg",
+    bgImage: "/assets/backgrounds/hotel.jpg",
   },
   {
     id: 3,
